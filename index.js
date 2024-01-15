@@ -48,11 +48,17 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+      if (err) {
+        console.error("Error writing MD file:", err);
+      } else {
+        console.log(`MD file "${fileName}" has been successfully generated.`);
+      }
+    });
 }
-
 // function to initialize program
 function init() {
-
+    
 }
 
 // function call to initialize program
