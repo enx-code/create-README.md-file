@@ -58,8 +58,15 @@ function writeToFile(fileName, data) {
 }
 // function to initialize program
 function init() {
-    
-}
+    inquirer.prompt(questions)
+        .then((answers) => {
+            const outputPath = path.join(__dirname, 'README.md');
+            writeToFile(outputPath, answers);
+        })
+        .catch((error) => {
+            console.error('Error during inquirer prompt', error);
+        });
+}       
 
 // function call to initialize program
 init();
