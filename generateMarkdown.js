@@ -18,6 +18,24 @@ function generateMarkdown(data) {
   ## Usage.
 
   ${data.usage}
+
+  ## License.
+  
+  ${data.license}
+
+  ## Contributing.
+
+  ${data.contributing}
+
+  ## Tests
+
+  ${data.test}
+
+  ## Questions.
+
+  "We have sent you instractions to your email " ${data.questions} " how to reach us!"
+
+
 `;
 }
 
